@@ -1,0 +1,54 @@
+package in.pwskills.nitin.main;
+
+import org.hibernate.query.Query;
+
+import java.util.List;
+
+import org.hibernate.Filter;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+
+import in.pwskills.nitin.bean.BankAccount;
+import in.pwskills.nitin.util.HibernateUtil;
+
+public class FilterApp {
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Session session = null;
+		try {
+			session = HibernateUtil.getSession();
+			
+			//Enabling the filter on Entity class called BankAccount
+			Filter filter = session.enableFilter("FILTER_BANK_ACCOUNT_STATUS");
+			filter.setParameter("param1", "Close");
+			filter.setParameter("param2", "Block");
+			
+			//HQL
+			Query<BankAccount> query = session.createQuery("from BankAccount where balance>=:amt");
+			query.setParameter("amt", 25000.0f);
+			
+			List<BankAccount> list = query.getResultList();
+			list.forEach(System.out::println);
+			
+			//Disabling the filter on entity class called BAnkAccount
+			
+			session.disableFilter("FILTER_BANK_ACCOUNT_STATUS");
+			
+			//HQL
+			Query<BankAccount> query1 = session.createQuery("from BankAccount where balance>=:amt");
+			query1.setParameter("amt", 25000.0f);
+			
+			List<BankAccount> list1 = query1.getResultList();
+			list1.forEach(System.out::println);
+			
+			
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		}finally {
+			HibernateUtil.closeSessionFactory();
+		}
+	}
+
+}

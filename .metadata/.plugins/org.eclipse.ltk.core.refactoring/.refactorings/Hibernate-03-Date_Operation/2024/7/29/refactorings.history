@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;Hibernate-03-Date_Operation&apos;&#x0D;&#x0A;- Original project: &apos;Hibernate-03-Date_Operation&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     in.pwskills.nitin.bean.ProgrammerProjectInfo.java&#x0D;&#x0A;     in.pwskills.nitin.bean.ProgramProjId.java" description="Delete elements" element1="/src&lt;in.pwskills.nitin.bean{ProgramProjId.java" element2="/src&lt;in.pwskills.nitin.bean{ProgrammerProjectInfo.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1721376459462" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package in.pwskills.nitin.main;
+
+public class QBCMainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package in.pwskills.nitin.main;
+
+public class HQLInsertQuery {
+
+	public static void main(String[] args) {
+
+	}
+}

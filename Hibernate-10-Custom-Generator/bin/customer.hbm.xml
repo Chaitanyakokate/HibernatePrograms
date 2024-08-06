@@ -1,0 +1,13 @@
+<hibernate-mapping>
+	<class name="in.pwskills.nitin.bean.Customer"
+		table="customer">
+
+		<!-- Primary key generator :: HIBERNATE -->
+		<id name="customerId" type="string" column="customerId">
+			<generator class="in.pwskills.nitin.generator.MyGenerator"/>
+		</id>
+
+		<property name="customerName" column="customername" type="string" />
+		<property name="location" column="location" type="string" />
+	</class>
+</hibernate-mapping>

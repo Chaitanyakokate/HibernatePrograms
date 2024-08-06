@@ -1,0 +1,18 @@
+package in.pwskills.nitin.main;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import in.pwskills.nitin.bean.BankAccount;
+import in.pwskills.nitin.util.HibernateUtil;
+
+public class InsertApp {
+	
+	public static void main(String[] args) {
+		Session session = HibernateUtil.getSession();
+		Transaction transaction = session.beginTransaction();
+		
+		BankAccount bank = new BankAccount();
+		
+	}
+}
